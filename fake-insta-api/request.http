@@ -1,0 +1,94 @@
+###
+POST http://localhost:3000/api/v1/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": 11,
+    "firstName": "Markus",
+    "lastName": "Terrell",
+    "username": "@markus",
+    "profilePic": 2,
+    "profileImages": [5, 3, 4]
+}
+###
+GET http://localhost:3000/api/v1/users HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/users/9 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/v1/users/10 HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": 10,
+    "firstName": "Mark",
+    "lastName": "Twain",
+    "username": "@marktwain",
+    "profilePic": 1,
+    "profileImages": [3, 4]
+}
+
+###
+DELETE  http://localhost:3000/api/v1/users/11 HTTP/1.1
+
+// chats
+###
+POST http://localhost:3000/api/v1/chats HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": 3,
+    "username": "@markus",
+    "message": "tanto tiempo",
+    "chatId": "abc456"
+}
+
+###
+GET http://localhost:3000/api/v1/chats HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/chats/abc123 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/api/v1/chats/3 HTTP/1.1
+
+
+// images
+###
+POST http://localhost:3000/api/v1/images HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": 3,
+    "imageSrc": "../../assets/posts/lokesh-paduchuri-xOBGLCETJCo-unsplash.jpg"
+}
+
+###
+GET http://localhost:3000/api/v1/images HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/images/2 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/api/v1/images/3 HTTP/1.1
+
+// posts
+###
+POST http://localhost:3000/api/v1/posts HTTP/1.1
+Content-Type: application/json
+
+{
+    "_id": 3,
+    "imageSrc": "../../assets/posts/lokesh-paduchuri-xOBGLCETJCo-unsplash.jpg",
+    "description": "lokesh-paduchuri-3"
+}
+
+###
+GET http://localhost:3000/api/v1/posts HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/posts/2 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/api/v1/posts/3 HTTP/1.1
